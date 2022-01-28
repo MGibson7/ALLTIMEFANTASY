@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FANTASY TRADING</title>
+</head>
+<h1>Your Player is {{my_player}}</h1>
+
+<script>
+    var image = {{image}}
+    var image1 = {{image1}}
+    var image2 = {{image2}}
+    var image3 = {{image3}}
+</script>
+<img src="{% static image %}"} alt="home" width = 125 height = auto />
+<h1> TRADE OFFER! {{trade_offer}}</h1>
+<img src="{% static image1 %}" alt="home" width = 125 height = auto /> <img src="{% static image2 %}" alt="None" width = 125 height = auto/> <img src="{% static image3 %}" alt="None" width = 125 height = auto/>
+
+
+
+<form action="add" method = "get">
+    <p>Trade Offer Decision</p>
+    <input type = "radio" id = 'Accept' name = 'Choice' value = "Accept">
+    <label for = 'Accept'>Accept Trade!</label>
+    <input type = "radio" id = 'Reject' name = 'Choice' value = "Reject">
+    <label for = 'Reject'>Reject Trade!</label>
+    <input type = 'submit' value = 'Submit'>
+</form>
+
+    <body>
+
+</body>
+</html>
