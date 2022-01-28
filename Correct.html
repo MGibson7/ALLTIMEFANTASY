@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RESULT!</title>
+</head>
+<h1>{{choice_outcome}}</h1>
+<h1>Your Player scored {{score}} vs Trade Offer score of {{trade_score}}</h1>
+<h1>Your correct streak is {{streak}}! Correct Picks needed to pull your next card {{final_streak}}</h1>
+<h1>QB <img src="{% static your_qb_img %}" alt="home" width = 125 height = auto /> HB <img src="{% static your_rb_img %}" alt="home" width = 125 height = auto /> WR <img src="{% static your_wr_img %}" alt="home" width = 125 height = auto />
+TE <img src="{% static your_te_img %}" alt="home" width = 125 height = auto /></h1>
+<h2> {{your_qb}} -- {{your_rb}} -- {{your_wr}} -- {{your_te}}</h2>
+<h2>QB SCORE: {{your_qb_score}} -- RB SCORE: {{your_rb_score}} -- WR SCORE: {{your_wr_score}} -- TE SCORE: {{your_te_score}}-- TOTAL SCORE: {{total_score}}</h2>
+
+
+<form action="http://127.0.0.1:8000/" method = "get">
+    <p>Play Again!?</p>
+    <input type = 'submit' name = 'Decision' value = 'YES!'>
+</form>
+
+    <body>
+
+</body>
+</html>
